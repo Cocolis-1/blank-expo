@@ -1,0 +1,87 @@
+{
+  "extends": "airbnb-typescript-prettier",
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "max-len": [
+      "warn",
+      {
+        "code": 120,
+        "ignorePattern": "^import\\s.+\\sfrom\\s.+;$", // Ignore imports
+        "ignoreUrls": true
+      }
+    ],
+    "camelcase": 0,
+    "@typescript-eslint/no-unused-vars": ["error", { "ignoreRestSiblings": true }],
+    "import/prefer-default-export": 0,
+    "jsx-a11y/aria-role": 0,
+    "react/prop-types": 0,
+    "react/function-component-definition": 0,
+    "jsx-quotes": ["error", "prefer-double"],
+    "react/react-in-jsx-scope": 0,
+    "arrow-body-style": ["error", "as-needed"],
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-first-prop-new-line": ["error", "multiline"],
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "no-console": 0,
+    "react/require-default-props": 0,
+    "import/no-cycle": 0,
+    "default-param-last": 0,
+    "react/jsx-curly-brace-presence": ["error", { "props": "never", "children": "always" }],
+    "react/no-array-index-key": 0,
+    "react/jsx-key": 2,
+    "react/style-prop-object": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.test.ts", "**/*.test.tsx", "src/utils/test/**/*"],
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ],
+    "import/order": [
+      "warn",
+      {
+        "pathGroups": [
+          {
+            "pattern": "~*/**",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "groups": [["builtin", "external"], "internal", ["parent", "index", "sibling"]],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["~"]
+      }
+    ],
+    "import/extensions": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [] // List of custom components we need to check for href rules
+      }
+    ],
+    "prettier/prettier": ["off", { "singleQuote": true }]
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-plugin-root-import": {}
+    }
+  },
+  "overrides": [
+    {
+      "files": "./src/store/**/*.ts",
+      "rules": {
+        "no-param-reassign": 0
+      }
+    }
+  ]
+}
