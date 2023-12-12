@@ -1,4 +1,5 @@
 import { SafeAreaView, Text } from 'react-native';
+import { Permission } from '../Permission/Permission';
 
 export const Application = () => (
     <SafeAreaView
@@ -8,6 +9,6 @@ export const Application = () => (
             alignItems: 'center'
         }}
     >
-        <Text>{'Application'}</Text>
+        <Permission />
     </SafeAreaView>
 );
