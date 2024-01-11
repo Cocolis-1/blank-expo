@@ -1,13 +1,3 @@
-import { SafeAreaView, Text } from 'react-native';
+import { Map } from './Map/Map';
 
-export const Application = () => (
-    <SafeAreaView
-        style={{
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center'
-        }}
-    >
-        <Text>{'Application'}</Text>
-    </SafeAreaView>
-);
+export const Application = () => <Map />;

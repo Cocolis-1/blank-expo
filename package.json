@@ -8,6 +8,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@rnmapbox/maps": "^10.1.5",
+    "@turf/turf": "^6.5.0",
     "eslint": "^8.52.0",
     "eslint-config-airbnb-typescript-prettier": "^5.0.0",
     "expo": "~49.0.15",
